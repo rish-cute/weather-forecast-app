@@ -194,7 +194,7 @@ async function handleSearch(city) {
 }
 
 // ========== EVENT LISTENERS ==========
-
+// This section handles location-based weather forecast when user clicks "Use my location"
 //  Get weather for current location using geolocation API
 locBtn.addEventListener('click', () => {
   if (!navigator.geolocation) { showMessage('Geolocation not supported.'); return; }
