@@ -1,5 +1,5 @@
 /* styles.css */
 body { transition: background 0.6s ease; }
-#currentCard { transition: transform .18s ease; }
+#currentCard { transition: transform .20s ease; }
 #currentCard:hover { transform: translateY(-6px); }
 
