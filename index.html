@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Forecast App</title>
+
+  <!-- Tailwind CSS CDN for fast responsive styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- External CSS for hover animation and transitions -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- Body background color and layout setup -->
+<body class="bg-sky-100 min-h-screen flex items-start justify-center p-6 transition-colors duration-500">
+
+  <!-- Main container (centered card) -->
+  <main class="w-full max-w-3xl bg-white rounded-2xl shadow-lg p-6">
+
+    <!-- ========== HEADER ========== -->
+    <header class="flex items-center justify-between gap-4">
+      <!-- App Title -->
+      <h1 class="text-2xl font-bold">Weather Forecast</h1>
+
+      <!-- Buttons and recent dropdown -->
+      <div class="flex gap-2 items-center">
+        <!-- Button to get weather using current location -->
+        <button id="locBtn" class="px-3 py-1 bg-blue-500 text-white rounded">Use my location</button>
+
+        <!-- Dropdown showing recent searched cities -->
+        <select id="recentDropdown" class="border rounded px-2 py-1">
+          <option value="">Recent searches</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- ========== MAIN SEARCH & DISPLAY SECTION ========== -->
+    <section class="mt-4 grid grid-cols-1 gap-4">
+
+      <!-- Input bar for entering city name -->
+      <div class="flex gap-2">
+        <input id="cityInput" type="text" placeholder="Enter city name"
+               class="flex-1 border rounded px-3 py-2" />
+        <button id="searchBtn" class="bg-green-500 text-white px-4 rounded">Search</button>
+      </div>
+
+      <!-- Message area for errors or alerts -->
+      <div id="msg" class="text-sm text-red-600"></div>
+
+      <!-- ========== CURRENT WEATHER CARD ========== -->
+      <div id="currentCard" class="hidden p-4 rounded-lg shadow-sm bg-white">
+        <div class="flex items-center justify-between">
+
+          <!-- Left side: city name and temperature -->
+          <div>
+            <h2 id="cityName" class="text-xl font-semibold"></h2>
+            <div class="flex items-center gap-3 mt-2">
+              <!-- Temperature -->
+              <div id="tempToday" class="text-4xl font-bold"></div>
+              <div class="flex flex-col text-sm">
+                <!-- Weather description + humidity/wind -->
+                <div id="desc"></div>
+                <div id="extra"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: weather icon + unit toggle -->
+          <div class="text-right">
+            <img id="iconToday" alt="weather icon" class="w-20 h-20 mx-auto" />
+            <div class="mt-2">
+              <label class="text-sm">Unit:</label>
+              <!-- Button to toggle between °C and °F -->
+              <button id="toggleUnit" class="ml-2 text-sm px-2 py-1 border rounded">°C</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== 5-DAY FORECAST SECTION ========== -->
+      <div id="forecast" class="hidden">
+        <h3 class="font-semibold mb-2">5-day Forecast</h3>
+
+        <!-- Grid to hold forecast cards dynamically -->
+        <div id="forecastCards"
+             class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-3">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Config file (contains your API key) -->
+  <script type="module" src="config.js"></script>
+
+  <!-- Main JavaScript file (contains logic for fetching weather data) -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
