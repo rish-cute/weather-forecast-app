@@ -4,6 +4,12 @@
 // and stores recent searches in localStorage.
 
 // Import API key from config.js (your private key)
+
+// ================================
+// Weather Forecast App - Final Version
+// All features tested and working correctly
+// ================================
+
 import { API_KEY } from './config.js';
 
 // ========== DOM ELEMENTS ==========
