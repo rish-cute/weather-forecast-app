@@ -58,3 +58,5 @@ Features: city search, geolocation, current weather, 5-day forecast, °C/°F tog
 
 **Note:** This project was built step-by-step using version control commits for each feature, design, and improvement.
 
+You can view the complete source code and version history here:  
+👉 [Weather Forecast App on GitHub](https://github.com/yourusername/weather-forecast-app)
