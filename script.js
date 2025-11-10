@@ -175,7 +175,7 @@ function renderForecast(forecastData) {
 async function handleSearch(city) {
   if (!city) { showMessage('Please enter a city name.'); return; }
   try {
-    msgEl.textContent = 'Loading...';
+    msgEl.textContent = 'Loading weather details...';
 
     // Fetch current + forecast data
     const cur = await fetchCurrentByCity(city);
