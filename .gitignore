@@ -1,8 +1,3 @@
 # Ignore local config with API keys
 config.js
 
-# node modules if you ever use node
-node_modules/
-
-# build/dist if created
-dist/
