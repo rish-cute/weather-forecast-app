@@ -6,7 +6,7 @@ Features: city search, geolocation, current weather, 5-day forecast, °C/°F tog
 ---
 
 ## Features
-- Retrieve weather data from OpenWeatherMap API (current + 5-day forecast).
+- Get weather data from OpenWeatherMap API (current + 5-day forecast).
 - Search by city name or use browser geolocation for local weather.
 - Display current conditions (temperature, humidity, wind, description, icon).
 - Extended 5-day forecast with daily cards (midday values).
@@ -22,7 +22,6 @@ Features: city search, geolocation, current weather, 5-day forecast, °C/°F tog
 - `styles.css` — minimal styles
 - `config.example.js` — copy to `config.js` and add your API key
 - `.gitignore` — ignores `config.js` and node modules
-- `assets/` — optional icons/backgrounds
 
 ---
 
@@ -34,14 +33,8 @@ Features: city search, geolocation, current weather, 5-day forecast, °C/°F tog
 
 ---
 
-## Notes on API key & security
-- For a student/assignment project, using the API key on client-side is acceptable.
-- For production, create a tiny backend (Express or serverless) and keep the key secret.
-
----
-
 ## Testing checklist
-- Search "Mumbai" / "London" works.
+- Search "Hyderabad" / "London" works.
 - Geolocation returns local weather.
 - 5-day forecast displays 5 cards.
 - Unit toggle updates temperatures.
@@ -59,4 +52,4 @@ Features: city search, geolocation, current weather, 5-day forecast, °C/°F tog
 **Note:** This project was built step-by-step using version control commits for each feature, design, and improvement.
 
 You can view the complete source code and version history here:  
-👉 [Weather Forecast App on GitHub](https://github.com/yourusername/weather-forecast-app)
+[Weather Forecast App on GitHub](https://github.com/rish-cute/weather-forecast-app)
